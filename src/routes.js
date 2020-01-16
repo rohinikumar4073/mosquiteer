@@ -3,6 +3,7 @@ import AuthRoutes from './pages/auth';
 import SplashScreen from './pages/splash';
 
 import MosquiteerIcon from "./resources/img/mosquiteer.png";
+import MosquiteerIcon512 from "./resources/img/mosquiteer-512x512.png";
 
 export default class Routes {
   // eslint-disable-next-line
@@ -22,10 +23,15 @@ export default class Routes {
 
       // language: Default en-US #optional
       "lang": "en-US",
+      "background_color":'green',
       "icons": [
             {
               "src": MosquiteerIcon,
               "sizes": "192x192"
+            },
+            {
+              "src":MosquiteerIcon512,
+              "sizes":"512x512"
             }
             // You may add more size if you want to, but it is optional
           ]

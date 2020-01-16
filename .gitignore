@@ -65,7 +65,7 @@ typings/
 etc/
 
 # Do not add dist to git
-dist
+# dist
 
 # ignore the config assets as its generated runtime and thus should notbe included in git
 src/config/assets.js

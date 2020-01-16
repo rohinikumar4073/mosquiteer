@@ -27,7 +27,7 @@ export default class Server {
 
     serverHandler.hooks.beforeHtmlRender.tapPromise('AddGoogleTracking', async (Application) => {
       Application.htmlProps.footer.push(<script async key="googleanalyticslink" src="https://www.googletagmanager.com/gtag/js?id=UA-108804791-2" />);
-      Application.htmlProps.footer.push(<script async key="googlemaplink" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkq8e6Wp58o-iTjAwhbAxVeScdhLInsTI&libraries=visualization&callback=initMap" />);
+      Application.htmlProps.footer.push(<script async key="googlemaplink" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkq8e6Wp58o-iTjAwhbAxVeScdhLInsTI&libraries=visualization" />);
 
       Application.htmlProps.footer.push(<script
         key="googleanalyticsscript"

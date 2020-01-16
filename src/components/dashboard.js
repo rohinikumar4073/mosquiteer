@@ -6,12 +6,11 @@ export default () => (
   <Protected>
     <UserLayout>
       <div className="title">Report</div>
-      
+
       <div className="columns is-multiline">
         <div className="column is-half-desktop is-half-tablet">
           <div className="box notification is-info">
             <div className="level mq-box">
-              
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -19,37 +18,29 @@ export default () => (
                   </span>
                 </div>
               </div>
-              
               <div className="level-item">
                 <div className="">
-                <Link  to="/MosquitoBreeding" >
-                  <div className="title is-4">Mosquito Breeding</div>
+                  <Link to="/MosquitoBreeding" >
+                    <div className="title is-4">Mosquito Breeding</div>
                   </Link >
                 </div>
               </div>
-
               <div className="level-right">
                 <div className="level-item">
-                 <span className="icon is-medium">
+                  <span className="icon is-medium">
                     <i className="fas fa-lg fa-arrow-right"></i>
                   </span>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-
-       
       </div>
-
-
       <div className="title">Visualizations</div>
       <div className="columns is-multiline">
         <div className="column ">
           <div className="box notification is-info">
             <div className="level mq-box">
-              
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -57,19 +48,16 @@ export default () => (
                   </span>
                 </div>
               </div>
-
               <div className="level-item">
                 <div className="">
-                <Link  to="/visualization" >
-                  <div className="title is-4">Breedings</div>
-                </Link >
-                  
+                  <Link to="/visualization" >
+                    <div className="title is-4">Breedings</div>
+                  </Link >
                 </div>
               </div>
-
               <div className="level-right">
                 <div className="level-item">
-                 <span className="icon is-medium">
+                  <span className="icon is-medium">
                     <i className="fas fa-lg fa-arrow-right"></i>
                   </span>
                 </div>
@@ -81,7 +69,7 @@ export default () => (
         <div className="column">
           <div className="box notification is-info">
             <div className="level">
-              
+
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -89,15 +77,13 @@ export default () => (
                   </span>
                 </div>
               </div>
-
               <div className="level-item">
                 <div className="">
-                <Link  to="/diseaseBreakout" >
-                  <div className="title is-4">Disease Breakout</div>
-                </Link >
+                  <Link to="/diseaseBreakout" >
+                    <div className="title is-4">Disease Breakout</div>
+                  </Link >
                 </div>
               </div>
-
               <div className="level-right">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -109,15 +95,13 @@ export default () => (
             </div>
           </div>
         </div>
-
-    </div>
-
-    <div className="title">News</div>
-    <div className="columns is-multiline">
+      </div>
+      <div className="title">News</div>
+      <div className="columns is-multiline">
         <div className="column">
           <div className="box notification is-info">
             <div className="level mq-box">
-              
+
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -125,23 +109,21 @@ export default () => (
                   </span>
                 </div>
               </div>
-
               <div className="level-item">
                 <div className="">
-                <Link  to="/articledata" >
-                   <div className="title is-4">Articles</div>
+                  <Link to="/articledata" >
+                    <div className="title is-4">Articles</div>
                   </Link >
                 </div>
               </div>
 
               <div className="level-right">
                 <div className="level-item">
-                 <span className="icon is-medium">
+                  <span className="icon is-medium">
                     <i className="fas fa-lg fa-arrow-right"></i>
                   </span>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -149,7 +131,7 @@ export default () => (
         <div className="column">
           <div className="box notification is-info">
             <div className="level">
-              
+
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -175,7 +157,7 @@ export default () => (
             </div>
           </div>
         </div>
-    </div>
+      </div>
     </UserLayout>
   </Protected>
 );

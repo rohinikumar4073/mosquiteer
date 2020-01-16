@@ -5,8 +5,8 @@ var fs = require("fs-extra");
 ObjectId = require("mongodb").ObjectId;
 var cors = require("cors");
 var MongoClient = require("mongodb").MongoClient;
-const url =
-  "mongodb://admin:mosquiteer@labspdbg00ah.mathworks.com:27017/mosquiteer";
+const url =  "mongodb+srv://admin:mosquiteer@cluster0-ibf7x.mongodb.net/test?retryWrites=true&w=majority"
+
 
 // Database Name
 const dbName = "mosquiteer";

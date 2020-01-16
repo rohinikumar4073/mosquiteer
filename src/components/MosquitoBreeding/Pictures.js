@@ -28,10 +28,10 @@ export default class Pictures extends React.Component {
         </div>
         <div className="columns is-vcentered">
           <div className="column ">
-              <button className="button" onClick={()=>{document.querySelector('#input-photo').click()}}> Take A Picture</button>
-           
+            <button className="button" onClick={() => { document.querySelector('#input-photo').click() }}> Take A Picture</button>
+
           </div>
-                 <div className="column ">
+          <div className="column ">
             <Link to="/Location">
               <button className="button"> Next</button>
             </Link>
