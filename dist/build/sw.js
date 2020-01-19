@@ -1,4 +1,4 @@
-self.paw__env={"PAW_CACHE":"true","PAW_VERBOSE":"false","PAW_ENV":"production","PAW_CONFIG_PATH":"/Users/VISHNU/mosquiteer-master/pawconfig.json","PAW_HOT":"false"};importScripts("/precache-manifest.7c265a53ea887178452f277022642362.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+self.paw__env={"PAW_CACHE":"true","PAW_VERBOSE":"false","PAW_ENV":"production","PAW_CONFIG_PATH":"/Users/VISHNU/mosquiteer-master/pawconfig.json","PAW_HOT":"false"};importScripts("/precache-manifest.1d89cec617ce9a3c91281ccd7e64d5ac.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 // eslint-disable-next-line
 const serviceWorker = self;
@@ -77,4 +77,4 @@ serviceWorker.workbox.routing.setDefaultHandler(({ event }) => {
 // eslint-disable-next-line
 serviceWorker.workbox.precaching.precacheAndRoute(serviceWorker.__precacheManifest);
 
-;self.paw__offline_assets = ["/css/04d54418e55f243fd81d.css","/js/04d54418e55f243fd81d.js","/css/7d838dc845e3a2f66f9a.css","/js/7d838dc845e3a2f66f9a.js"];self.paw__injected_variables = {"workboxDebug":true,"port":"8080","host":"0.0.0.0","appRootUrl":"","cdnUrl":"","serverSideRender":true,"serviceWorker":true,"singlePageApplication":false,"asyncCSS":true,"polyfill":"internal","react":"internal","clientRootElementId":"app","assetsMaxAge":2592000000,"hstsEnabled":true,"hstsMaxAge":31536000,"hstsIncludeSubDomains":false,"hstsPreload":false,"noJS":false,"hashedRoutes":false,"resourcesBaseUrl":"/"};
+;self.paw__offline_assets = ["/css/bc48ae11d97391ba58c3.css","/js/bc48ae11d97391ba58c3.js","/css/ac12701a28f3e03de361.css","/js/ac12701a28f3e03de361.js"];self.paw__injected_variables = {"workboxDebug":true,"port":"9090","host":"0.0.0.0","appRootUrl":"","cdnUrl":"","serverSideRender":true,"serviceWorker":true,"singlePageApplication":false,"asyncCSS":true,"polyfill":"internal","react":"internal","clientRootElementId":"app","assetsMaxAge":2592000000,"hstsEnabled":true,"hstsMaxAge":31536000,"hstsIncludeSubDomains":false,"hstsPreload":false,"noJS":false,"hashedRoutes":false,"resourcesBaseUrl":"/"};
