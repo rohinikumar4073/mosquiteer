@@ -4,7 +4,7 @@ import UserLayout from './user-layout.js';
 import API from './api.js';
 import { Spinner } from 'spin.js';
 import 'spin.js/spin.css';
-
+let ref1 =React.createRef();
 export default class visualization extends React.Component {
   createInfoMap(data) {
     var src = `data:image/png;base64,${data.img}`;
@@ -70,7 +70,7 @@ export default class visualization extends React.Component {
   }
   componentDidMount() {
     let spinner = new Spinner().spin();
-    document.body.append(spinner.el);
+   ref1 & ref1.current.append(spinner.el);
     axios
       .get(
         API.getAllMosquitoBreeding
@@ -81,9 +81,10 @@ export default class visualization extends React.Component {
       });
   }
   render() {
+
     return (
       <UserLayout>
-        <div className="columns">
+        <div className="columns" ref={ref1}>
           <div className="disease-breeding-visualization columns"></div>
         </div>
       </UserLayout>

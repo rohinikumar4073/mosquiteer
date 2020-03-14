@@ -39,7 +39,7 @@ export default class MosquitoBreeding extends React.Component {
       image: ""
     };
   }
-  submitDetails = e => {
+  submitDetails = ref => e => {
     event.preventDefault();
 
     var fileToUpload = this.state.image;
@@ -57,7 +57,7 @@ export default class MosquitoBreeding extends React.Component {
     fd.append("address", e.address);
     fd.append("description", e.description);
     let spinner = new Spinner().spin();
-    document.body.append(spinner.el);
+    ref.current.append(spinner.el);
     axios
       .post(API.reportMosquitoBreeding, fd, config)
       .then(response => {
@@ -86,11 +86,12 @@ export default class MosquitoBreeding extends React.Component {
     if (this.state.redirect) {
       return <Redirect to={{ pathname: '/dashboard' }}></Redirect>;
     }
+    let ref1 = React.createRef()
     return (
       <UserLayout>
         {!this.props.location.state ? <Redirect to={{ pathname: '/Pictures', state: { redirect: true } }}></Redirect> :
           <Router>
-            <div className="tabs">
+            <div className="tabs" ref={ref1}>
               <ul>
                 <li>
                   <NavLink to="/Pictures" activeClassName="is-active">
@@ -116,7 +117,7 @@ export default class MosquitoBreeding extends React.Component {
               />
               <Route
                 path="/Details"
-                children={<Details latitude={this.state.latitude} longitude={this.state.longitude} submitDetails={this.submitDetails} />}
+                children={<Details latitude={this.state.latitude} longitude={this.state.longitude} submitDetails={this.submitDetails(ref1)} />}
               />
             </Switch>
           </Router>}
