@@ -2,9 +2,10 @@ import React from "react";
 import axios from "axios";
 import UserLayout from './user-layout.js';
 import API from './api.js';
+import { MAP_HEIGHT } from './MosquiteerEnum';
 import { Spinner } from 'spin.js';
 import 'spin.js/spin.css';
-let ref1 =React.createRef();
+let ref1 = React.createRef();
 export default class visualization extends React.Component {
   createInfoMap(data) {
     var src = `data:image/png;base64,${data.img}`;
@@ -22,10 +23,12 @@ export default class visualization extends React.Component {
     return spinner;
   }
   loadMap = data => {
-    if (document.querySelector(".disease-breeding-visualization")) {
-      document.querySelector(".disease-breeding-visualization").innerHTML = "";
+    let diseaseBreedingVis = document.querySelector(".disease-breeding-visualization");
+    if (diseaseBreedingVis) {
+      diseaseBreedingVis.innerHTML = "";
+      diseaseBreedingVis.style.height = `${window.innerHeight - MAP_HEIGHT}px`;
       let map = new google.maps.Map(
-        document.querySelector(".disease-breeding-visualization"),
+        diseaseBreedingVis,
         {
           zoom: 13,
           center: { lat: 17.4415342, lng: 78.3820794 },
@@ -70,7 +73,7 @@ export default class visualization extends React.Component {
   }
   componentDidMount() {
     let spinner = new Spinner().spin();
-   ref1 & ref1.current.append(spinner.el);
+    ref1 & ref1.current.append(spinner.el);
     axios
       .get(
         API.getAllMosquitoBreeding

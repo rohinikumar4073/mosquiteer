@@ -47,8 +47,9 @@ footer.footer.mosquiteer {
 }
 
 .mosquito-breeding-map, .disease-breeding-visualization, .disease-breakout-map{
-    height: 300px;
+    min-height: 300px;
     width:100%;
+    margin-bottom: 20px;
 }
 
 .splash-wrapper{

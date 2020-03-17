@@ -1,5 +1,7 @@
 import React from "react";
 import UserLayout from "./user-layout.js";
+import { MAP_HEIGHT } from './MosquiteerEnum';
+
 export default class diseaseBreakout extends React.Component {
   getLocation() {
     if (window.navigator.geolocation) {
@@ -9,11 +11,14 @@ export default class diseaseBreakout extends React.Component {
     }
   }
   loadMap = pos => {
-    if (document.querySelector(".disease-breakout-map")) {
-      document.querySelector(".disease-breakout-map").innerHTML = "";
+    let diseaseBreakOutMap = document.querySelector(".disease-breakout-map");
+    if (diseaseBreakOutMap) {
+      diseaseBreakOutMap.innerHTML = "";
+      diseaseBreakOutMap.style.height = `${window.innerHeight - MAP_HEIGHT}px`
+
       var india = new google.maps.LatLng(20.5937, 78.9629);
       let map = new google.maps.Map(
-        document.querySelector(".disease-breakout-map"),
+        diseaseBreakOutMap,
         {
           zoom: 3,
           center: india,

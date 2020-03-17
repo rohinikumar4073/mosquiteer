@@ -86,12 +86,12 @@ export default class MosquitoBreeding extends React.Component {
     if (this.state.redirect) {
       return <Redirect to={{ pathname: '/dashboard' }}></Redirect>;
     }
-    let ref1 = React.createRef()
+    let tabsDOM = React.createRef()
     return (
       <UserLayout>
         {!this.props.location.state ? <Redirect to={{ pathname: '/Pictures', state: { redirect: true } }}></Redirect> :
           <Router>
-            <div className="tabs" ref={ref1}>
+            <div className="tabs" ref={tabsDOM}>
               <ul>
                 <li>
                   <NavLink to="/Pictures" activeClassName="is-active">
@@ -117,7 +117,7 @@ export default class MosquitoBreeding extends React.Component {
               />
               <Route
                 path="/Details"
-                children={<Details latitude={this.state.latitude} longitude={this.state.longitude} submitDetails={this.submitDetails(ref1)} />}
+                children={<Details latitude={this.state.latitude} longitude={this.state.longitude} submitDetails={this.submitDetails(tabsDOM)} />}
               />
             </Switch>
           </Router>}

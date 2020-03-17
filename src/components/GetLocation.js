@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MAP_HEIGHT } from './MosquiteerEnum';
 export default class GetLocation extends React.Component {
   getLocation() {
     if (window.navigator.geolocation) {
@@ -9,12 +10,15 @@ export default class GetLocation extends React.Component {
     }
   }
   loadMap = pos => {
-    if (document.querySelector(".mosquito-breeding-map")) {
-      document.querySelector(".mosquito-breeding-map").innerHTML = "";
+    let mosquitoBreedingMapDOM = document.querySelector(".mosquito-breeding-map");
+    if (mosquitoBreedingMapDOM) {
+      mosquitoBreedingMapDOM.innerHTML = "";
       var cords = { lat: pos.coords.latitude, lng: pos.coords.longitude };
       this.setState({ cords });
+      mosquitoBreedingMapDOM.style.height = `${window.innerHeight - MAP_HEIGHT}px`
       var map = new window.google.maps.Map(
-        document.querySelector(".mosquito-breeding-map"),
+        mosquitoBreedingMapDOM
+        ,
         { zoom: 15, center: cords }
       );
       this.props.onCordinatesSet(pos.coords);
@@ -25,7 +29,7 @@ export default class GetLocation extends React.Component {
         draggable: true
       });
       let onCordinatesSet = this.props.onCordinatesSet;
-      marker.addListener("dragend", function() {
+      marker.addListener("dragend", function () {
         onCordinatesSet({
           latitude: this.position.lat(),
           longitude: this.position.lng()
