@@ -88,3 +88,6 @@ a.is-active {
   min-width: 100px;
   min-height:100px;
 }
+.panel-articles{
+  padding:10px;
+}

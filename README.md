@@ -4,3 +4,5 @@ This is a PWA app to report the breeding areas of mosquitoes. The reported breed
 
  The backend for this app is in the following github project.
 https://github.com/rohinikumar4073/mosquiteer-backend
+
+The live site is deployed at http://mosquiteer.herokuapp.com/
