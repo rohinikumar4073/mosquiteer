@@ -9,7 +9,7 @@ export default class GuestLayout extends React.PureComponent {
       <div>
         <header className="hero is-light">
           <div className="hero-head container">
-            <nav className="navbar has-shadow" role="navigation" aria-label="main navigation">
+            <nav className="navbar " role="navigation" aria-label="main navigation">
               <div className="navbar-brand">
                 <span className="navbar-item"></span>
                 <Link className="navbar-item is--brand" to="/dashboard">

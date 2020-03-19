@@ -10,7 +10,7 @@ export default () => (
       <div className="columns is-multiline">
         <div className="column is-half-desktop is-half-tablet">
           <div className="box notification is-info">
-            <div className="level mq-box">
+            <div className="level mq-box is-mobile ">
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -21,7 +21,7 @@ export default () => (
               <div className="level-item">
                 <div className="">
                   <Link to="/MosquitoBreeding" >
-                    <div className="title is-4">Mosquito Breeding</div>
+                    <div className="title is-5">Mosquito Breeding</div>
                   </Link >
                 </div>
               </div>
@@ -40,7 +40,7 @@ export default () => (
       <div className="columns is-multiline">
         <div className="column ">
           <div className="box notification is-info">
-            <div className="level mq-box">
+            <div className="level mq-box is-mobile ">
               <div className="level-left">
                 <div className="level-item">
                   <span className="icon is-medium">
@@ -51,7 +51,7 @@ export default () => (
               <div className="level-item">
                 <div className="">
                   <Link to="/visualization" >
-                    <div className="title is-4">Breedings</div>
+                    <div className="title is-5">Breedings</div>
                   </Link >
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default () => (
         </div>
         <div className="column">
           <div className="box notification is-info">
-            <div className="level">
+            <div className="level is-mobile ">
 
               <div className="level-left">
                 <div className="level-item">
@@ -77,10 +77,10 @@ export default () => (
                   </span>
                 </div>
               </div>
-              <div className="level-item">
+              <div className="level-item ">
                 <div className="">
                   <Link to="/diseaseBreakout" >
-                    <div className="title is-4">Disease Breakout</div>
+                    <div className="title is-5">Disease Breakout</div>
                   </Link >
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default () => (
       <div className="columns is-multiline">
         <div className="column">
           <div className="box notification is-info">
-            <div className="level mq-box">
+            <div className="level mq-box is-mobile ">
 
               <div className="level-left">
                 <div className="level-item">
@@ -112,7 +112,7 @@ export default () => (
               <div className="level-item">
                 <div className="">
                   <Link to="/articledata" >
-                    <div className="title is-4">Articles</div>
+                    <div className="title is-5">Articles</div>
                   </Link >
                 </div>
               </div>
@@ -130,34 +130,7 @@ export default () => (
         </div>
 
         <div className="column">
-          <div className="box notification is-info">
-            <div className="level">
-
-              <div className="level-left">
-                <div className="level-item">
-                  <span className="icon is-medium">
-                    <i className="fas fa-lg fa-twitter-square"></i>
-                  </span>
-                </div>
-              </div>
-
-              <div className="level-item">
-                <div className="">
-                  <div className="title is-4">Twitter</div>
-                </div>
-              </div>
-
-              <div className="level-right">
-                <div className="level-item">
-                  <span className="icon is-medium">
-                    <i className="fas fa-lg fa-arrow-right"></i>
-                  </span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
+       </div>
       </div>
     </UserLayout>
   </Protected>
