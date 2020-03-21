@@ -111,7 +111,7 @@ export default () => (
               </div>
               <div className="level-item">
                 <div className="">
-                  <Link to="/articledata" >
+                  <Link to="/Articledata" >
                     <div className="title is-5">Articles</div>
                   </Link >
                 </div>

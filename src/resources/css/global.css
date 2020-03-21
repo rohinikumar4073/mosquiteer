@@ -91,3 +91,6 @@ a.is-active {
 .panel-articles{
   padding:10px;
 }
+.article-data{
+  overflow: auto;
+}
