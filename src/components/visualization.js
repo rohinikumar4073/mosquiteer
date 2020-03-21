@@ -3,11 +3,10 @@ import axios from "axios";
 import UserLayout from './user-layout.js';
 import API from './api.js';
 import { MAP_HEIGHT } from './MosquiteerEnum';
-import { Spinner } from 'spin.js';
-import 'spin.js/spin.css';
-let ref1 = React.createRef();
-export default class visualization extends React.Component {
-  createInfoMap(data) {
+import withSpinner from './withSpinner';
+let visualRef = React.createRef();
+class Visualization extends React.Component {
+  createInfoMap (data) {
     var src = `data:image/png;base64,${data.img}`;
     var html = `<div class='wrapper-vis'>
        <div class='description'>${data.description} </div>
@@ -17,11 +16,7 @@ export default class visualization extends React.Component {
       </div>`;
     return html;
   }
-  createInfoMapWithSpinner(target) {
-    var spinner = new Spinner().spin();
-    target.appendChild(spinner.el);
-    return spinner;
-  }
+  
   loadMap = data => {
     let diseaseBreedingVis = document.querySelector(".disease-breeding-visualization");
     if (diseaseBreedingVis) {
@@ -46,7 +41,7 @@ export default class visualization extends React.Component {
           index: i
         });
         let createInfoMap = this.createInfoMap;
-        let createInfoMapWithSpiner = this.createInfoMapWithSpinner;
+        let createInfoMapWithSpiner = this.props.startSpinner;
         let j = i;
         google.maps.event.addListener(marker, "click", function () {
           let divElement = document.createElement('div');
@@ -68,12 +63,11 @@ export default class visualization extends React.Component {
       }
     }
   };
-  onCordinatesSet() {
+  onCordinatesSet () {
     this.props.onCordinatesSet(this.state.cords);
   }
-  componentDidMount() {
-    let spinner = new Spinner().spin();
-    ref1 & ref1.current.append(spinner.el);
+  componentDidMount () {
+   let spinner = this.props.startSpinner(visualRef.current);
     axios
       .get(
         API.getAllMosquitoBreeding
@@ -83,14 +77,15 @@ export default class visualization extends React.Component {
         this.loadMap(response.data);
       });
   }
-  render() {
+  render () {
 
     return (
       <UserLayout>
-        <div className="columns" ref={ref1}>
+        <div className="columns" ref={visualRef}>
           <div className="disease-breeding-visualization columns"></div>
         </div>
       </UserLayout>
     );
   }
 }
+export default withSpinner(Visualization);

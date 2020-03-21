@@ -92,7 +92,7 @@ export default [
     }
   },
   {
-    path: "/articledata",
+    path: "/Articledata",
     exact: true,
     component: () => import("../components/articledata"),
     seo: {

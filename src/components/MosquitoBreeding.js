@@ -5,9 +5,7 @@ import Location from "./GetLocation";
 import UserLayout from "./user-layout";
 import axios from 'axios';
 import API from './api.js';
-import { Spinner } from 'spin.js';
-import 'spin.js/spin.css';
-
+import withSpinner from './withSpinner';
 import {
   BrowserRouter as Router,
   Switch,
@@ -32,7 +30,7 @@ const routes = [
   }
 ];
 
-export default class MosquitoBreeding extends React.Component {
+class MosquitoBreeding extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,8 +54,7 @@ export default class MosquitoBreeding extends React.Component {
     fd.append("longitude", this.state.longitude);
     fd.append("address", e.address);
     fd.append("description", e.description);
-    let spinner = new Spinner().spin();
-    ref.current.append(spinner.el);
+    let spinner =  this.props.startSpinner(ref.current);
     axios
       .post(API.reportMosquitoBreeding, fd, config)
       .then(response => {
@@ -125,3 +122,4 @@ export default class MosquitoBreeding extends React.Component {
     );
   }
 }
+export default withSpinner(MosquitoBreeding);
