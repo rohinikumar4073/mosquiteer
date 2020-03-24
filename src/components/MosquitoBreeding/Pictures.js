@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 export default class Pictures extends React.Component {
   // eslint-disable-next-line
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.handlePhotoUpload = e =>
       this._handlePhotoUpload(e.currentTarget, this.refs.photImg);
   }
 
-  _handlePhotoUpload(e) {
+  _handlePhotoUpload (e) {
     this.props.onPictureTaken(e);
   }
 
-  render() {
+  render () {
     return (
       <div className='container-child'>
         <div className="columns is-vcentered">
@@ -28,7 +28,11 @@ export default class Pictures extends React.Component {
         </div>
         <div className="columns is-vcentered">
           <div className="column ">
-            <button className="button" onClick={() => { document.querySelector('#input-photo').click() }}> Take A Picture</button>
+            <button className="button" onClick={() => { document.querySelector('#input-photo').click() }}>
+
+              <span class="icon is-medium">
+                <i class="fas fa-camera"></i> </span>
+              <span >Take A Picture</span></button>
 
           </div>
           <div className="column ">
