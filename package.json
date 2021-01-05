@@ -39,7 +39,7 @@
     "@pawjs/srcset": "^2.1.3",
     "@types/react": "^16.9.13",
     "@types/react-dom": "^16.9.4",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "bulma": "^0.8.0",
     "cloudinary": "^1.17.0",
